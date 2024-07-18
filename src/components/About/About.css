@@ -1,0 +1,54 @@
+/* About.css */
+
+.about-container {
+  padding: 20px; /* Adjust padding for content spacing */
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  margin-bottom: 30px;
+}
+
+.about-intro {
+  color: #666;
+}
+
+.team-images {
+  margin-top: 30px;
+}
+
+.team-images img{
+  object-position: top;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 10px; 
+}
+
+.team-member-name {
+  color: #333;
+  font-weight: bold;
+}
+
+.ceo-member {
+  text-align: center; 
+}
+
+.regular-member {
+  text-align: center; 
+}

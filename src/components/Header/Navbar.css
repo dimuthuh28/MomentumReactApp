@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#navcontent {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-background-light);
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='dark'] #navcontent {
+  background-color: var(--navbar-background-dark);
+  color: var(--navbar-text-color-dark);
+}
+
+#navcontent a:hover {
+  color: #39320a; 
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f9d509;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+#logolink {
+  display: flex;
+  align-items: center;
+}
+
+#logoimg {
+  height: 70px;
+}
+
+#navcontent a {
+  color: var(--navbar-text-color-light);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+[data-theme='dark'] #navcontent a {
+  color: var(--navbar-text-color-dark);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #f9d509;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger.toggle svg {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ecda0d;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+
+  .nav-active .nav-links {
+    display: flex;
+  }
+
+  #logoimg {
+    margin-bottom: 10px;
+  }
+
+  .nav-links a {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active .nav-links {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+:root {
+  --navbar-background-light: #ecda0d;
+  --navbar-text-color-light: rgb(0, 0, 0);
+}
+
+[data-theme='dark'] {
+  --navbar-background-dark: #1a1a1a;
+  --navbar-text-color-dark: #ffffff;
+}

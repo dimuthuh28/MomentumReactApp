@@ -1,0 +1,55 @@
+.gallery-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f9;
+  /* border-radius: 8px; */
+  margin-bottom: 20px;
+  background-size: cover;
+}
+
+.gallery-box {
+  text-align: center;
+}
+
+.gallery-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.gallery-images {
+  margin-top: 1.5rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.email-input {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    padding: 1rem;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .signup-box {
+    padding: 1rem;
+  }
+}
